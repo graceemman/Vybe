@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tools</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+<h2>🎯 Recommendation</h2>
+<select id="mood" class="form-control">
+<option value="chill">Chill</option>
+<option value="hype">Hype</option>
+</select>
+
+<button onclick="recommend()" class="btn btn-primary mt-2">Get</button>
+<p id="rec"></p>
+
+<hr>
+
+<h2>📝 To-Do</h2>
+<input id="taskInput" class="form-control">
+<button onclick="addTask()" class="btn btn-success mt-2">Add</button>
+<ul id="list"></ul>
+
+<hr>
+
+<h2>🔢 Sorting</h2>
+<input id="nums" class="form-control">
+<button onclick="sortNum()" class="btn btn-info mt-2">Sort</button>
+<p id="result"></p>
+
+<hr>
+
+<h2>✨ Effect</h2>
+<button id="toggleBtn" class="btn btn-warning">Toggle</button>
+<div id="box"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
