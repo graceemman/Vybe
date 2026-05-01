@@ -1,48 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Tools</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VYBE Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="vibe-bg inner-page">
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VYBE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tools.html">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<body>
+  <main class="page-content">
+    <div class="container">
+      <div class="page-heading text-center">
+        <p class="eyebrow">Interactive zone</p>
+        <h1>VYBE Tools</h1>
+        <p>Pick a mood, sort a list, and organize your mini mission queue.</p>
+      </div>
 
-<div class="container mt-4">
+      <div class="text-center mb-4">
+        <button id="toggleToolsBtn" class="btn vibe-btn">Toggle Tools</button>
+      </div>
 
-<h2>🎯 Recommendation</h2>
-<select id="mood" class="form-control">
-<option value="chill">Chill</option>
-<option value="hype">Hype</option>
-</select>
+      <div id="toolsPanel" class="row g-4">
+        <div class="col-lg-4">
+          <section class="tool-card glass-panel h-100">
+            <span class="section-kicker">Mood</span>
+            <h2>Recommendation</h2>
+            <label for="moodSelect" class="form-label">Choose your mood</label>
+            <select id="moodSelect" class="form-select">
+              <option value="">Select mood</option>
+              <option value="focused">Focused</option>
+              <option value="happy">Happy</option>
+              <option value="chill">Chill</option>
+              <option value="competitive">Competitive</option>
+            </select>
+            <button id="recommendBtn" class="btn outline-btn w-100 mt-3">Get Recommendation</button>
+            <div id="recommendationResult" class="result-box mt-3">Your vibe suggestion will appear here.</div>
+          </section>
+        </div>
 
-<button onclick="recommend()" class="btn btn-primary mt-2">Get</button>
-<p id="rec"></p>
+        <div class="col-lg-4">
+          <section class="tool-card glass-panel h-100">
+            <span class="section-kicker">Tasks</span>
+            <h2>To-do List</h2>
+            <div class="input-group">
+              <input id="taskInput" type="text" class="form-control" placeholder="Add a task">
+              <button id="addTaskBtn" class="btn outline-btn" type="button">Add</button>
+            </div>
+            <ul id="taskList" class="task-list mt-3" aria-label="To-do tasks"></ul>
+          </section>
+        </div>
 
-<hr>
+        <div class="col-lg-4">
+          <section class="tool-card glass-panel h-100">
+            <span class="section-kicker">Numbers</span>
+            <h2>Sorting Tool</h2>
+            <label for="numberInput" class="form-label">Numbers separated by commas</label>
+            <input id="numberInput" type="text" class="form-control" placeholder="9, 4, 12, 1">
+            <button id="sortBtn" class="btn outline-btn w-100 mt-3">Sort Ascending</button>
+            <div id="sortResult" class="result-box mt-3">Sorted numbers will appear here.</div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<h2>📝 To-Do</h2>
-<input id="taskInput" class="form-control">
-<button onclick="addTask()" class="btn btn-success mt-2">Add</button>
-<ul id="list"></ul>
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>© 2026 VYBE. Tools for mood, focus, and flow.</p>
+    </div>
+  </footer>
 
-<hr>
-
-<h2>🔢 Sorting</h2>
-<input id="nums" class="form-control">
-<button onclick="sortNum()" class="btn btn-info mt-2">Sort</button>
-<p id="result"></p>
-
-<hr>
-
-<h2>✨ Effect</h2>
-<button id="toggleBtn" class="btn btn-warning">Toggle</button>
-<div id="box"></div>
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

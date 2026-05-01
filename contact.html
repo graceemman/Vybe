@@ -1,26 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact VYBE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="vibe-bg inner-page">
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VYBE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<body>
+  <main class="page-content">
+    <div class="container">
+      <div class="page-heading text-center">
+        <p class="eyebrow">Reach out</p>
+        <h1>Contact</h1>
+        <p>Send your name and email to connect with the VYBE team.</p>
+      </div>
 
-<div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-6">
+          <section class="glass-panel form-card">
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="name" type="text" class="form-control" placeholder="Your name">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="email" class="form-control" placeholder="you@example.com">
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <button type="submit" class="btn vibe-btn w-100">Submit</button>
+              <div id="formMessage" class="form-message mt-3" role="status"></div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
 
-<h2>Contact</h2>
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>© 2026 VYBE. Let the right mood find the right track.</p>
+    </div>
+  </footer>
 
-<form onsubmit="return validate()">
-<input id="name" class="form-control mb-2" placeholder="Name">
-<input id="email" class="form-control mb-2" placeholder="Email">
-<button class="btn btn-success">Submit</button>
-</form>
-
-</div>
-
-<script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
